@@ -2,6 +2,8 @@
 test.v
 testa.v
 testb.v
+.gitignore
+.DS_store
 
 build/
 test/
