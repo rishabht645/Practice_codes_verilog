@@ -4,3 +4,4 @@ testa.v
 testb.v
 
 build/
+test/
