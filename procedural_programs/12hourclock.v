@@ -41,14 +41,14 @@ module top_module(
 
     always @(posedge clk) begin
         if(reset) begin
-        	hh <= 8'h;    //hh=
+        	hh <= 8'h12;    //hh=12
             pm <= 0;
         end
         else begin
             if(enable[4] && (mm == 8'h59) && (ss == 8'h59)) begin    //if mm=59 and ss=59
-                if(hh == 8'h)  hh <= 8'h1; //hh changes:AM->1AM or PM->1PM  
+                if(hh == 8'h12)  hh <= 8'h1; //hh changes:12AM->1AM or 12PM->1PM  
             	else if(hh == 8'h11) begin  //if hh=11, PM->AM or AM->PM
-            		hh[3:0] <= hh[3:0] + 1'h1; //hh=
+            		hh[3:0] <= hh[3:0] + 1'h1; //hh=12
                		pm <= ~pm;
                 end 
                 else begin
