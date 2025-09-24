@@ -6,3 +6,4 @@ testb.v
 
 build/
 test/
+hdlbits/
